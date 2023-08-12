@@ -41,7 +41,7 @@ class Helpers:
         self.seq = seq_list
         return name_list, seq_list
 
-    def parseAssToLinage(self):
+    def parseAccToLinage(self):
         df = pd.read_csv(self.csv_path)
         acc_id = df["accession_id"]
         linage = df["lineage"]

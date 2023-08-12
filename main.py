@@ -25,7 +25,7 @@ helper = Helpers(csv_path, input_file)
 # Data Parsing (ID to Lineage + Genome to Lineage) - All values will be stores in dicts
 print("Data Parsing (ID to Lineage + Genome to Lineage) - All values will be stores in dicts")
 if not load:
-    helper.parseAssToLinage()
+    helper.parseAccToLinage()
     names, seq = helper.parseFasta()
     helper.mapGenomeToLinage()
 
@@ -56,7 +56,7 @@ train_features, test_features, train_labels, test_labels = train_test_split(
 print("Model")
 n_output = input_labels.shape[1]
 np.expand_dims(train_features, 0)
-batch_size = 18
+batch_size = 24
 val_split = 0.3
 epochs = 1
 
