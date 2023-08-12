@@ -81,10 +81,5 @@ callbacks_list = [checkpoint]
 # Model testing
 x = helper.model.evaluate(test_features, test_labels)
 predicted_labels = helper.model.predict(np.stack(test_features))
-confusion = metrics.confusion_matrix(np.argmax(test_labels, axis=1), np.argmax(predicted_labels, axis=1))
-TP = confusion[1, 1]
-FP = confusion[0, 1]
-TN = confusion[0, 0]
-FN = confusion[1, 0]
 scores = helper.model.evaluate(test_features, test_labels, verbose=0)
 print("Accuracy: %.2f%%" % (scores[1]*100))
